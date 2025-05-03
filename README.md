@@ -63,7 +63,17 @@ A simple Flask-based web app that lets users chat with a pretrained Transformer 
    ```
 2. Open your browser at `http://127.0.0.1:5000/`.
 
-3. Start chatting!
+3. Start chatting ;)
+
+## Docker usage
+
+1. docker build -t llm-chatbot .
+
+2. docker run -d --name my-chatbot -p 5000:5000 llm-chatbot
+
+3. docker logs -f my-chatbot
+
+4. open ur browser at localhost
 
 ## Backend Details
 - **Route /**  
@@ -95,4 +105,4 @@ A simple Flask-based web app that lets users chat with a pretrained Transformer 
 - **Static file errors**: Verify `url_for('static', ...)` paths match your directory layout.
 
 ## License
-MIT © JC
+GNU GPL V3 @ Krzychu 2025

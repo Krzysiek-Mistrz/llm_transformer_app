@@ -2,9 +2,15 @@ Flask
 Flask_Cors
 torch
 <<<<<<< HEAD
+<<<<<<< HEAD
 transformers==4.*
 flax
 jax
 =======
 transformers==4.*
 >>>>>>> a032838 (fixed hosting issue,  adjusted requirements, updated index, updated readme)
+=======
+transformers==4.*
+flax
+jax
+>>>>>>> 61cdfed (installed flax and jax as well to fix loading model err)

@@ -2,12 +2,26 @@ from flask import Flask, request, render_template
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from flask_cors import CORS
 import json
+import torch
 
 app = Flask(__name__)
 CORS(app)
 
 model_name = "facebook/blenderbot-400M-distill"
-model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+model = AutoModelForSeq2SeqLM.from_pretrained(
+    model_name,
+    from_tf=True,
+    from_flax=False,
+    cache_dir=None,
+    force_download=False,
+    ignore_mismatched_sizes=False,
+    local_files_only=False,
+    revision="main",
+    use_safetensors=None,
+    torch_dtype=torch.float16,
+    low_cpu_mem_usage=True,
+    trust_remote_code=True
+)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 conversation_history = []
 

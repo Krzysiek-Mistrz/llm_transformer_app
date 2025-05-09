@@ -1,5 +1,4 @@
-
-from flask import Flask, request
+from flask import Flask, request, render_template
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from flask_cors import CORS
 import json
@@ -33,4 +32,4 @@ def handle_prompt():
     return response
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0", port=5000)

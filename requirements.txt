@@ -1,6 +1,10 @@
 Flask
 Flask_Cors
 torch
+<<<<<<< HEAD
 transformers==4.*
 flax
 jax
+=======
+transformers==4.*
+>>>>>>> a032838 (fixed hosting issue,  adjusted requirements, updated index, updated readme)

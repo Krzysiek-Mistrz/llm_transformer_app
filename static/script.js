@@ -31,7 +31,7 @@ const sendMessage = async (message) => {
   messagesContainer.appendChild(loadingtextElement);
 
   async function makePostRequest(msg) {
-    const url = 'www.example.com';
+    const url = '/chatbot';
     const requestBody = {
       prompt: msg
     };
